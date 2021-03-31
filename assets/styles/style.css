@@ -1,0 +1,88 @@
+.logo h1 {
+  font-size: 30px;
+  margin: 0;
+  line-height: 1;
+}
+
+.logo h1 a {
+  display: inline-block;
+  padding: 15px 20px;
+  background: #111111;
+  color: #fff;
+  border-bottom: 5px;
+}
+
+.main-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-menu ul li {
+  display: inline-block;
+  position: relative;
+}
+
+.main-menu ul li a {
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 15px 20px;
+  color: #343434;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.main-menu ul li ul.sub-menu {
+  position: absolute;
+  background: #222;
+  width: 200px;
+  left: 0;
+  top: 120%;
+  -webkit-transition: .3s;
+  transition: .3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.main-menu ul li ul.sub-menu li {
+  display: block;
+  border-bottom: 1px solid #000;
+}
+
+.main-menu ul li ul.sub-menu li a {
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.main-menu ul li ul.sub-menu li ul.sub-menu {
+  left: 120%;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.main-menu ul li ul.sub-menu li:last-child {
+  border-bottom: 0;
+}
+
+.main-menu ul li ul.sub-menu li:hover > ul.sub-menu {
+  opacity: 1;
+  visibility: visible;
+  left: 100%;
+}
+
+.main-menu ul li:hover > a {
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+.main-menu ul li:hover ul.sub-menu {
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+}
+/*# sourceMappingURL=style.css.map */

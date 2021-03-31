@@ -1,0 +1,87 @@
+
+$bg-black:#000;
+$color-white:#fff;
+$menu-color:#343434;
+$dropdown-bg:#222;
+$logo-bg:#111111;
+
+.logo{
+    h1{
+        font-size: 30px;
+        margin: 0;
+        line-height: 1;
+        a{
+            display: inline-block;
+            padding: 15px 20px;
+            background: $logo-bg;
+            color: $color-white;
+            border-bottom: 5px;
+        }
+    }
+}
+
+.main-menu {
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            display: inline-block;
+            position: relative;
+            a{
+                display: block;
+                font-size: 17px;
+                font-weight: 700;
+                padding: 15px 20px;
+                color: $menu-color;
+                transition: .3s;
+
+            }
+            ul.sub-menu{
+                position: absolute;
+                background: $dropdown-bg;
+                width: 200px;
+                left: 0;
+                top: 120%;
+                transition: .3s;
+                opacity: 0;
+                visibility: hidden;
+                li{
+                    display: block;
+                    border-bottom: 1px solid $bg-black;
+                    a{
+                        padding: 10px 15px;
+                        font-size: 15px;
+                        font-weight: 600;
+                        color: $color-white;
+                    }
+                    ul.sub-menu {
+                        left: 120%;
+                        top: 0;
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                }
+                li:last-child {
+                    border-bottom: 0;
+                }
+                li:hover > ul.sub-menu {
+                    opacity: 1;
+                    visibility: visible;
+                    left: 100%;
+                }
+            }
+        }
+        li:hover > a {
+            background: $bg-black;
+            color: $color-white;
+            text-decoration: none;
+        }
+        li:hover ul.sub-menu {
+            opacity: 1;
+            visibility: visible;
+            top: 100%;
+        }
+        
+    }
+}
